@@ -16,6 +16,7 @@ struct node
   struct node *left;
   struct node *right;
 };
+
 /* Create a new BST node, just as a reminder, nodes are what
   connects the data */
   struct node *newNode(int item)
@@ -28,4 +29,21 @@ struct node
     temp -> right = NULL;
 
     return temp;
+  }
+
+  /*inorder traversal, root is beggining of tree */
+  void inOrder(struct node *root)
+  {
+    if (root != NULL)
+    {
+      inOrder(root -> left);
+      printf("%d \n", root -> key);
+      inOrder(root -> right);
+    }
+  }
+
+
+  int main()
+  {
+
   }
