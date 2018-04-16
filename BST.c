@@ -41,9 +41,26 @@ struct node
       inOrder(root -> right);
     }
   }
+  /* inserting in the BST */
+  struct node* insert(struct node* node, int key)
+  {
+    if (node == NULL) {
+      return newNode(key);
+    }
+    /* if our data is less than the current node, then go left */
+    if (key < node -> key) {
+      node -> left = insert(node -> left, key);
+    }
+    /* if our data is bigger than the current node, then go right */
+    else if (key > node -> key) {
+      node -> right = insert(node -> right, key);
+    }
+    return node;
+  }
 
 
   int main()
   {
+
 
   }
