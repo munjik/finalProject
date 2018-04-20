@@ -1,7 +1,7 @@
 /* CS361 Project, Implementing Binary Search Tree.
 Created by Munji Kahalah and Leo Pereda
 Starting with Gerenric Balanced Tree
-04/12/2018 */
+04/12/2018 testing */
 
 #include <stdio.h>
 #include <stdlib.h>
