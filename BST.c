@@ -6,32 +6,13 @@ Starting with Gerenric Balanced Tree
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Struct - Creates a data type that can be used to group items
- of possibly different types into a single type. The basic start of our tree
- Tree node w integer data */
 
-struct node
-{
-  int key;
-  struct node *left;
-  struct node *right;
-};
-
-/* Create a new BST node, just as a reminder, nodes are what
-  connects the data */
-  struct node *newNode(int item)
+  int main()
   {
-    // allocate memory for new nodes
-    struct node *temp = (struct node *)malloc(sizeof(struct node));
-    // write ITEM into 'int' at address temp
-    temp -> key = item;
-    temp -> left = NULL;
-    temp -> right = NULL;
 
-    return temp;
   }
 
-  /*inorder traversal, root is beggining of tree */
+  /*setting up inorder, root is beggining of tree */
   void inOrder(struct node *root)
   {
     if (root != NULL)
@@ -40,6 +21,30 @@ struct node
       printf("%d \n", root -> key);
       inOrder(root -> right);
     }
+  }
+
+/* Struct - Creates a data type that can be used to group items
+ of possibly different types into a single type. The basic start of our tree
+ Tree node w integer data */
+struct node
+{
+  int key;
+  struct node *left; // left side of the tree
+  struct node *right; // right side of the tree
+};
+
+/* Create a new BST node, just as a reminder, nodes are what
+  connects the data */
+  struct node *newNode(int data)
+  {
+    // allocate memory for new nodes
+    struct node *make = (struct node *)malloc(sizeof(struct node));
+    // write ITEM into 'int' at address make
+    make -> left = NULL;
+    make -> right = NULL;
+    make -> key = data;
+
+    return make;
   }
   /* inserting in the BST */
   struct node* insert(struct node* node, int key)
@@ -56,11 +61,4 @@ struct node
       node -> right = insert(node -> right, key);
     }
     return node;
-  }
-
-
-  int main()
-  {
-
-
   }
