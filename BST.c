@@ -118,33 +118,33 @@ struct node *searchingData(struct node *root, int key)
 
   int main()
   {
-struct node *root = NULL;
-root = insertBST(root, 50);
-insertBST(root, 30);
-insertBST(root, 20);
-insertBST(root, 40);
-insertBST(root, 70);
-insertBST(root, 60);
-insertBST(root, 80);
+
+    struct node *root = NULL;
+    root = insertBST(root, 3);
+    insertBST(root, 4);
+    insertBST(root, 5);
+    insertBST(root, 6);
+    insertBST(root, 7);
+    insertBST(root, 8);
+    insertBST(root, 9);
 // print numbers from least to greatest of the BST
 
-printf("Numbers of given tree \n");
-setOrder(root);
-printf("\n");
+  printf("Numbers of given tree \n");
+  setOrder(root);
+  printf("\n");
 
-printf("Delete 50\n");
-root = deleteBSTnode(root, 50);
-printf("Updated Tree:\n");
-setOrder(root);
-printf("\n");
+  printf("Delete 5\n");
+  root = deleteBSTnode(root, 5);
+  printf("Updated Tree:\n");
+  setOrder(root);
+  printf("\n");
 
-printf("delete 30\n");
-root = deleteBSTnode(root , 30);
-printf("Updated Tree:\n");
-setOrder(root);
-printf("\n");
+  printf("delete 3\n");
+  root = deleteBSTnode(root , 3);
+  printf("Updated Tree:\n");
+  setOrder(root);
+  printf("\n");
 
-
-return 0;
+  return 0;
 
   }
